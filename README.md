@@ -277,4 +277,4 @@ road-segmentation-classical-vs-deep/
 - [x] Classical baselines evaluated
 - [x] U-Net trained and evaluated on validation split
 - [x] Final test evaluation completed
-- [ ] Final report and demo video completed
+- [x] Final report and demo video completed
