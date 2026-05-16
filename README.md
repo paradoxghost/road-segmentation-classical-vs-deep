@@ -276,30 +276,7 @@ http://localhost:8502
 
 Note: Docker will automatically download the prebuilt image the first time. No dataset download is required for the demo.
 
-Docker option:
 
-```bash
-docker build -t road-seg-demo .
-docker run --rm -p 8501:8501 road-seg-demo
-```
-
-Then open:
-
-```text
-http://localhost:8501
-```
-
-If port `8501` is already in use:
-
-```bash
-docker run --rm -p 8502:8501 road-seg-demo
-```
-
-Then open:
-
-```text
-http://localhost:8502
-```
 
 ## Environment Setup
 
