@@ -238,13 +238,13 @@ To launch the local software demo:
 python -m streamlit run app/demo_app.py
 ```
 
-The demo includes a few bundled CamVid test images in:
+The demo includes 30 bundled CamVid test images in:
 
 ```text
 app/sample_images/
 ```
 
-These samples let the app run immediately without downloading the full CamVid dataset. The full dataset remains excluded from Git and Docker because it is large.
+These samples let the app run immediately without downloading the full CamVid dataset. They are selected from across the test split so the model can be tried on multiple road scenes. The full dataset remains excluded from Git and Docker because it is large.
 
 Docker option:
 
