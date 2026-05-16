@@ -246,6 +246,36 @@ app/sample_images/
 
 These samples let the app run immediately without downloading the full CamVid dataset. They are selected from across the test split so the model can be tried on multiple road scenes. The full dataset remains excluded from Git and Docker because it is large.
 
+## One-command Docker Demo
+
+The easiest way to test the demo is to use the prebuilt Docker image. This does not require cloning the repository, installing Python dependencies, or downloading the CamVid dataset. The Docker image already includes the Streamlit demo, the trained U-Net checkpoint, and bundled sample road images.
+
+Run:
+
+```bash
+docker run --rm -p 8501:8501 vitosparadox/road-segmentation-demo:latest
+```
+
+Then open:
+
+```text
+http://localhost:8501
+```
+
+If port 8501 is busy:
+
+```bash
+docker run --rm -p 8502:8501 vitosparadox/road-segmentation-demo:latest
+```
+
+Then open:
+
+```text
+http://localhost:8502
+```
+
+Note: Docker will automatically download the prebuilt image the first time. No dataset download is required for the demo.
+
 Docker option:
 
 ```bash

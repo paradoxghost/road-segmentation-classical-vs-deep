@@ -223,13 +223,11 @@ def render_unet_inference() -> None:
     sample_images = image_paths(SAMPLE_IMAGE_DIR)
     selected_sample: Path | None = None
     if sample_images:
-        sample_options = ["No sample selected"] + [path.name for path in sample_images]
         selected_sample_name = st.selectbox(
             "Use a bundled CamVid test sample",
-            sample_options,
+            [path.name for path in sample_images],
         )
-        if selected_sample_name != "No sample selected":
-            selected_sample = SAMPLE_IMAGE_DIR / selected_sample_name
+        selected_sample = SAMPLE_IMAGE_DIR / selected_sample_name
 
     uploaded_file = st.file_uploader(
         "Or upload a road-scene image",
