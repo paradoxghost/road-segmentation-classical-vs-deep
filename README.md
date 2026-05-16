@@ -230,6 +230,47 @@ Final test results:
 | K-means Morph | 0.8678 | 0.6058 | 0.7545 | 0.6959 | 0.8239 |
 | U-Net | 0.9723 | 0.8912 | 0.9425 | 0.9639 | 0.9220 |
 
+## Demo App
+
+To launch the local software demo:
+
+```bash
+python -m streamlit run app/demo_app.py
+```
+
+The demo includes a few bundled CamVid test images in:
+
+```text
+app/sample_images/
+```
+
+These samples let the app run immediately without downloading the full CamVid dataset. The full dataset remains excluded from Git and Docker because it is large.
+
+Docker option:
+
+```bash
+docker build -t road-seg-demo .
+docker run --rm -p 8501:8501 road-seg-demo
+```
+
+Then open:
+
+```text
+http://localhost:8501
+```
+
+If port `8501` is already in use:
+
+```bash
+docker run --rm -p 8502:8501 road-seg-demo
+```
+
+Then open:
+
+```text
+http://localhost:8502
+```
+
 ## Environment Setup
 
 Create a virtual environment:
